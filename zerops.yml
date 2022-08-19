@@ -3,5 +3,5 @@ docs:
     base: [ nodejs@16 ]
     build:
       - yarn
-      - yarn build docs-app
+      - yarn build
     deploy: [ 'dist/apps/docs-app/~' ]

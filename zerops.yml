@@ -1,4 +1,4 @@
-docs:
+docsstage:
   build:
     base: [ nodejs@16 ]
     build:
@@ -6,7 +6,23 @@ docs:
       - yarn build
     deploy: [ 'dist/apps/docs-app/~' ]
 
-app:
+appstage:
+  build:
+    base: [ nodejs@16 ]
+    build:
+      - yarn
+      - yarn build
+    deploy: [ 'dist/apps/analog-app/~' ]
+
+docsprod:
+  build:
+    base: [ nodejs@16 ]
+    build:
+      - yarn
+      - yarn build
+    deploy: [ 'dist/apps/docs-app/~' ]
+
+appprod:
   build:
     base: [ nodejs@16 ]
     build:
